@@ -32,7 +32,7 @@ public class App {
         if(sorted_strone.equals(sorted_strtwo))
             return true;
         else
-            return true;
+            return false;
     }
 
 

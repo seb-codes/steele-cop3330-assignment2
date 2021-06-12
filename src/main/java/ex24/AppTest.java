@@ -23,7 +23,7 @@ public class AppTest
         // simple check, no case differences
         App check = new App();
         boolean actual = App.isAnagram("cameralistic","acclimatiser");
-        int expected = true;
+        boolean expected = true;
         assertEquals(expected, actual);
     }
 
@@ -33,7 +33,7 @@ public class AppTest
         // different casing, still an anagram
         App check = new App();
         boolean actual = App.isAnagram("Elbow","below");
-        int expected = 1;
+        boolean expected = true;
         assertEquals(expected, actual);
     }
 
@@ -43,7 +43,7 @@ public class AppTest
         // Not an Anagram, different lengths
         App check = new App();
         boolean actual = App.isAnagram("Study","Car");
-        int expected = 0;
+        boolean expected = false;
         assertEquals(expected, actual);
     }
 
@@ -53,7 +53,7 @@ public class AppTest
         // Not an Anagram, same lengths
         App check = new App();
         boolean actual = App.isAnagram("Study","Thing");
-        int expected = 0;
+        boolean expected = false;
         assertEquals(expected, actual);
     }
 
