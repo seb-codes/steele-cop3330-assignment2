@@ -17,22 +17,22 @@ public class App {
 
         return new String(strHolder);
     }
-    public static int AnagramCheck(String str_one, String str_two){
+    public static boolean isAnagram(String str_one, String str_two){
         // 0 is false(not Anagram)
         int one_length= str_one.length();
         int two_length= str_two.length();
 
         if(one_length!=two_length)
-            return 0;
+            return false;
 
         // make sure this is not case sensitive.
         String sorted_strone = stringSort(str_one.toLowerCase());
         String sorted_strtwo = stringSort(str_two.toLowerCase());
 
         if(sorted_strone.equals(sorted_strtwo))
-            return 1;
+            return true;
         else
-            return 0;
+            return true;
     }
 
 
@@ -45,9 +45,9 @@ public class App {
         System.out.print("Enter the second string:");
         String str_two = scan.nextLine();
 
-        int res = AnagramCheck(str_one, str_two);
+        boolean res = isAnagram(str_one, str_two);
 
-        if(res==1)
+        if(res)
             System.out.println(String.format("%s and %s are anagrams",str_one,str_two));
         else
             System.out.println(String.format("%s and %s are NOT anagrams",str_one,str_two));

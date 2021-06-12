@@ -22,8 +22,8 @@ public class AppTest
     public void test_anagram_set1(){
         // simple check, no case differences
         App check = new App();
-        int actual = App.AnagramCheck("cameralistic","acclimatiser");
-        int expected = 1;
+        boolean actual = App.isAnagram("cameralistic","acclimatiser");
+        int expected = true;
         assertEquals(expected, actual);
     }
 
@@ -32,7 +32,7 @@ public class AppTest
     public void test_anagram_set2(){
         // different casing, still an anagram
         App check = new App();
-        int actual = App.AnagramCheck("Elbow","below");
+        boolean actual = App.isAnagram("Elbow","below");
         int expected = 1;
         assertEquals(expected, actual);
     }
@@ -42,7 +42,7 @@ public class AppTest
     public void test_anagram_set3(){
         // Not an Anagram, different lengths
         App check = new App();
-        int actual = App.AnagramCheck("Study","Car");
+        boolean actual = App.isAnagram("Study","Car");
         int expected = 0;
         assertEquals(expected, actual);
     }
@@ -52,7 +52,7 @@ public class AppTest
     public void test_anagram_set4(){
         // Not an Anagram, same lengths
         App check = new App();
-        int actual = App.AnagramCheck("Study","Thing");
+        boolean actual = App.isAnagram("Study","Thing");
         int expected = 0;
         assertEquals(expected, actual);
     }
